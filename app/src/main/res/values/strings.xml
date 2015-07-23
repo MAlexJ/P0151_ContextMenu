@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">P0151_ContextMenu</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="text_01">Text 01</string>
+    <string name="text_02">Text 02</string>
+    <string name="text_03">Text 03</string>
+    <string name="text_04">Text 04</string>
+</resources>
