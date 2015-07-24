@@ -8,6 +8,7 @@ import android.view.ContextMenu;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -19,6 +20,7 @@ public class MainActivity extends Activity {
     private TextView tv_04;
     private final int INFO = 1;
     private final int DELETE = 2;
+    private ImageView imageNextActiv;
 
 
     @Override
@@ -30,6 +32,50 @@ public class MainActivity extends Activity {
         tv_02 = (TextView) findViewById(R.id.tv_catalog_02);
         tv_03 = (TextView) findViewById(R.id.tv_catalog_03);
         tv_04 = (TextView) findViewById(R.id.tv_catalog_04);
+
+        imageNextActiv = (ImageView) findViewById(R.id.next_act);
+
+
+        imageNextActiv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                int num = (int) (Math.random() * 10);
+
+                switch (num) {
+                    case 0:
+                        tv_01.setTextColor(Color.WHITE);
+                        break;
+                    case 1:
+                        tv_01.setTextColor(Color.TRANSPARENT);
+                        break;
+                    case 2:
+                        tv_01.setTextColor(Color.LTGRAY);
+                        break;
+                    case 3:
+                        tv_01.setTextColor(Color.DKGRAY);
+                        break;
+                    case 4:
+                        tv_01.setTextColor(Color.MAGENTA);
+                        break;
+                    case 5:
+                        tv_01.setTextColor(Color.CYAN);
+                        break;
+                    case 6:
+                        tv_01.setTextColor(Color.RED);
+                        break;
+                    case 7:
+                        tv_01.setTextColor(Color.YELLOW);
+                        break;
+                    default:
+                        tv_01.setTextColor(Color.BLACK);
+                        break;
+                }
+
+
+            }
+        });
 
         registerForContextMenu(tv_01);
         registerForContextMenu(tv_02);
