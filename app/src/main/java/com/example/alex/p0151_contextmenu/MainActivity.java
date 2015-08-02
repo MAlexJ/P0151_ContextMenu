@@ -1,6 +1,7 @@
 package com.example.alex.p0151_contextmenu;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -21,7 +22,7 @@ public class MainActivity extends Activity {
     private final int INFO = 1;
     private final int DELETE = 2;
     private ImageView imageNextActiv;
-
+    private Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,41 +40,8 @@ public class MainActivity extends Activity {
         imageNextActiv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-
-                int num = (int) (Math.random() * 10);
-
-                switch (num) {
-                    case 0:
-                        tv_01.setTextColor(Color.WHITE);
-                        break;
-                    case 1:
-                        tv_01.setTextColor(Color.TRANSPARENT);
-                        break;
-                    case 2:
-                        tv_01.setTextColor(Color.LTGRAY);
-                        break;
-                    case 3:
-                        tv_01.setTextColor(Color.DKGRAY);
-                        break;
-                    case 4:
-                        tv_01.setTextColor(Color.MAGENTA);
-                        break;
-                    case 5:
-                        tv_01.setTextColor(Color.CYAN);
-                        break;
-                    case 6:
-                        tv_01.setTextColor(Color.RED);
-                        break;
-                    case 7:
-                        tv_01.setTextColor(Color.YELLOW);
-                        break;
-                    default:
-                        tv_01.setTextColor(Color.BLACK);
-                        break;
-                }
-
-
+                intent = new Intent(MainActivity.this, SecondActivity.class);
+                startActivity(intent);
             }
         });
 
