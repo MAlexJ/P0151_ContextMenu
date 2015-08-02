@@ -8,18 +8,22 @@ public class Catalog {
     public Catalog() {
     }
 
-    public Catalog(String id, String name, int image) {
-        this.id = id;
+    public Catalog(String name, int image) {
         this.name = name;
         this.image = image;
+        this.id = generationId();
     }
 
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
+    private String generationId() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("00");
+        sb.append("_" + getName().length());
+        sb.append("_" + getImage() + "_");
+        if (getName() != null) {
+            String str = this.getName();
+            sb.append(str.replace(' ', '_'));
+        }
+        return sb.toString();
     }
 
     public String getName() {

@@ -72,7 +72,7 @@
         android:orientation="vertical">
 
         <ListView
-            android:id="@+id/list_frafment_2"
+            android:id="@+id/list_view_second_activity"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
