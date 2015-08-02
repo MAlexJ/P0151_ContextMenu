@@ -1,25 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
 
-    <fragment
-        android:id="@+id/frabment1"
-        android:name="fragment.Fragment_1"
+    >
+
+    <LinearLayout
+        android:layout_weight="3"
+        android:id="@+id/layout_0"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="2"
-        tools:layout="@layout/fragment_1" />
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/layout_1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#FFA000"
+            android:orientation="horizontal"></LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="6"
+            android:background="#FFC107"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="87dp"
+                    android:layout_marginStart="87dp"
+                    android:text="Info"
+                    android:textColor="@color/primary_text_default_material_dark"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/iv_fragment_1"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginStart="50dp"
+                    android:layout_toEndOf="@+id/textView"
+                    android:layout_toRightOf="@+id/textView"
+                    android:src="@drawable/icon_second" />
+            </RelativeLayout>
+        </LinearLayout>
 
 
-    <fragment
-        android:id="@+id/frabment2"
-        android:name="fragment.Fragment_2"
-        android:layout_width="match_parent"
+    </LinearLayout>
+
+
+    <LinearLayout
+
+      android:layout_weight="1"  android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1"
-        tools:layout="@layout/fragment_2" />
+        android:orientation="vertical">
+
+        <ListView
+            android:id="@+id/list_frafment_2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </ListView>
+
+    </LinearLayout>
 
 </LinearLayout>

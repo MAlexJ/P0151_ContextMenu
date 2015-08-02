@@ -35,12 +35,11 @@ public class MainActivity extends Activity {
         tv_04 = (TextView) findViewById(R.id.tv_catalog_04);
 
         imageNextActiv = (ImageView) findViewById(R.id.next_act);
-
+        intent = new Intent(MainActivity.this, SecondActivity.class);
 
         imageNextActiv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                intent = new Intent(MainActivity.this, SecondActivity.class);
                 startActivity(intent);
             }
         });

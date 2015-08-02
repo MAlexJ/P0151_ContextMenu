@@ -1,10 +1,8 @@
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#222"
-    android:orientation="vertical"
-    >
+    android:orientation="vertical">
 
     <LinearLayout
         android:id="@+id/ll_head"
@@ -12,16 +10,18 @@
         android:layout_height="30dp"
         android:background="#0288d1"
         android:orientation="horizontal">
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
             <ImageView
-                android:src="@drawable/abc_btn_rating_star_on_mtrl_alpha"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
-                android:layout_alignParentEnd="true" />
+                android:src="@drawable/abc_btn_rating_star_on_mtrl_alpha" />
         </RelativeLayout>
 
 
@@ -66,16 +66,14 @@
 
             <ImageView
                 android:id="@+id/next_act"
-                android:src="@drawable/next_activity"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
-                android:layout_centerVertical="true"
-                android:layout_alignParentRight="true"
                 android:layout_alignParentEnd="true"
-                android:layout_marginRight="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
                 android:layout_marginEnd="50dp"
-                android:onClick="true"/>
-
+                android:layout_marginRight="50dp"
+                android:src="@drawable/next_activity" />
 
 
         </RelativeLayout>
@@ -94,37 +92,37 @@
             android:id="@+id/tv_catalog_01"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="10dp"
             android:text="@string/text_01"
             android:textSize="22sp"
-            android:textStyle="bold"
-            android:layout_margin="10dp"/>
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/tv_catalog_02"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="10dp"
             android:text="@string/text_02"
             android:textSize="22sp"
-            android:textStyle="bold"
-            android:layout_margin="10dp"/>
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/tv_catalog_03"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="10dp"
             android:text="@string/text_03"
             android:textSize="22sp"
-            android:textStyle="bold"
-            android:layout_margin="10dp"/>
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/tv_catalog_04"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="10dp"
             android:text="@string/text_04"
             android:textSize="22sp"
-            android:textStyle="bold"
-            android:layout_margin="10dp"/>
+            android:textStyle="bold" />
     </LinearLayout>
 
     <ImageView
